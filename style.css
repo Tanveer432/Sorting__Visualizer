@@ -1,0 +1,256 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "JetBrains Mono",monospace;
+  }
+  .header{
+    height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b3a3a;
+  }
+  #text {
+    margin: .5%;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    font-size: xx-large;
+    letter-spacing: 1vw;
+    background: linear-gradient(90deg, rgb(216, 203, 203), rgb(91, 11, 11), #000);
+    background-repeat: no-repeat;
+    background-size: 80%;
+    animation: animate 3s linear infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  
+  @media only screen and (max-width: 510px) {
+    #animateText {
+      font-size: large;
+    }
+  }
+  
+  @media only screen and (max-width: 320px) {
+    #animateText {
+      font-size: medium;
+    }
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position: -500%;
+    }
+    100% {
+      background-position: 500%;
+    }
+  }
+  
+  
+  
+  .buttons_bar {
+    color: white;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 30% 60%;
+        grid-template-columns: 30% 60%;
+    -webkit-column-gap: 10%;
+            column-gap: 10%;
+    padding: 2% 5%;
+    background-color: #3b3a3a;
+    
+  }
+  
+  .buttons_bar #a_generate {
+    height: 70%;
+    margin-top: 2%;
+    margin-left: 20%;
+    margin-right: 2%;
+    padding-left: 2%;
+    padding-right: 2%;
+    border-radius: 50vw;
+    font-size: medium;
+    color: white;
+    background-color: black;
+    transition: 0.3s;
+    opacity: 0.6;
+    background-color: orangered
+  }
+
+  .buttons_bar #a_generate:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+  
+  .buttons_bar .algos {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (16.66667%)[];
+    grid-template-columns: repeat(6, 16.66667%);
+    place-content: center;
+    padding: 2% 0%;
+  }
+  
+  .buttons_bar .algos button {
+  height: 100%;
+  margin-bottom: 8%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 2%;
+  padding-right: 2%;
+  border-radius: 50vw;
+  font-size: medium;
+  color: white;
+  background-color: black;
+  transition: 0.3s;
+  box-sizing: border-box;
+  }
+  
+  .buttons_bar .algos button:hover {
+    font-style: bold;
+    border-width: 0.3vh;
+    cursor: pointer;
+    border-color: peru;
+    color: peru;
+    transition: 0.3s;
+  }
+  
+  .buttons_bar .algos .butt_locked {
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  .buttons_bar .algos .butt_locked:hover {
+    background-color: transparent;
+    cursor: not-allowed;
+  }
+  
+  .buttons_bar .algos .butt_selected {
+    background-color: white;
+    color: green;
+  }
+  
+  .buttons_bar .algos .butt_selected:hover {
+    background-color: white;
+    cursor: not-allowed;
+  }
+  
+  .buttons_bar .algos .butt_unselected:hover {
+    font-style: bold;
+  border-width: 1.8vh;
+  cursor: not-allowed;
+  transition: 0.3s;
+  }
+  
+  section {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 20% 60% 20%;
+        grid-template-columns: 20% 60% 20%;
+  }
+  
+  section .Complexity_Containers {
+    margin-top: 20%;
+  }
+  
+  section .Complexity_Containers .Pair_Definitions {
+    margin-top: 20%;
+  }
+  
+  section .Complexity_Containers .Pair_Definitions p {
+    display: inline;
+  }
+  
+  section .Complexity_Containers .Pair_Definitions p.Sub_Heading {
+    font-size: medium;
+    text-transform: none;
+  }
+  
+  section #Info_Cont1 {
+    padding: 20% 10%;
+  }
+  
+  section #Info_Cont1 h3 {
+    text-decoration: underline;
+  }
+  
+  section #array_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 80%;
+    height: 70vh;
+  }
+  
+  section #Info_Cont2 {
+    padding: 20% 10%;
+  }
+  
+  section #Info_Cont2 h3 {
+    text-decoration: underline;
+  }
+  
+  .hide {
+    display: none;
+  }
+
+  footer{
+    bottom: 0;
+    width: 100%;
+    height: 50px; 
+  }
+
+
+  .array-inputs {
+    height: 2%; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    transition: visibility .3s linear,opacity .3s linear;
+    
+  }
+
+  .column {
+    width: 50%;
+    /* align-self: center; */
+    justify-self: center; 
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50vh;
+    background-image: linear-gradient(180deg,rgba(202, 202, 217, 0.9),rgba(100,100,250,.5),rgba(100,100,250,.9));
+  } 
+
+  #a_size{
+    color: rgba(100, 180, 255, 1);
+    padding: 10px;
+    inline-size: 60%;
+  }
+
+  #a_speed{
+    color: rgba(100, 180, 255, 1);
+    padding: 10px;
+    inline-size: 60%;
+  } 
+
+
+  
+  /*
+  @media (max-width: 480px)//Mobiles
+  {
+      
+  }
+  @media (min-width: 481px) and (max-width: 1250px)//Tablets
+  {
+  }
+  @media (min-width: 1251px)//Laptops and up
+  {
+  }
+  */
+  /*
+      *****************
+      DONE BY:- Mohd Tanveer
+      *****************
+  */
